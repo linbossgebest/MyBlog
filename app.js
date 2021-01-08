@@ -4,12 +4,14 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser=require('body-parser')
+const flash=require('connect-flash')
 
 //创建web服务器
 let app = express();
 
 //开放静态资源
-app.use('/publc/',express.static(path.join(__dirname, 'public')))
+app.use('/publc/',express.static('./public/'))
+app.use('/node_modules/',express.static('./node_modules/'))
 
 //配置express模板引擎的位置
 app.set('views', path.join(__dirname, "views"));
@@ -37,6 +39,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //使用express-session处理请求
+app.use(session(
+  {
+      secret: 'secret key',
+      resave: false,
+      saveUninitialized: true,
+      cookie: { secure: false }
+  }));
+
+//flsah中间件 用来显示通知
+app.use(flash())
 
 //登录拦截
 

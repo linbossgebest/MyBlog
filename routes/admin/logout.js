@@ -1,0 +1,11 @@
+module.exports=(req,res)=>{
+    //清除session
+    req.session.destroy(()=>{
+        //清除公共数据
+        req.app.local.userInfo=null
+        //清除cookie
+        res.clearCookie('connect.sid')
+        res.flash('success','登出成功')
+        res.redirect('/admin/login')
+    })
+}

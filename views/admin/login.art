@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>登陆页面</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/public/stylesheets/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <form action="/admin/login" method="POST">
+                <div class="form-group">
+                    <label>邮件</label>
+                    <input name="email" type="email" class="form-control" placeholder="请输入邮件地址">
+                </div>
+                <div class="form-group">
+                    <label>密码</label>
+                    <input name="password" type="password" class="form-control" placeholder="请输入密码">
+                </div>
+                <button type="submit" class="btn btn-primary">登录</button>
+                <a href="/home">
+                    <button type="button" class="btn btn-primary">首页</button>
+                </a>
+            </form>
+        </div>
+    </div>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
