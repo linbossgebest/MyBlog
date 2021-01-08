@@ -1,0 +1,9 @@
+{{extend './common/layout.art'}}
+{{block 'link'}}
+<link rel='stylesheet' href="/home/css/index.css">
+{{/block}}
+
+{{block 'main'}}
+
+
+{{/block}}
