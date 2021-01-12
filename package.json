@@ -19,6 +19,7 @@
     "http-errors": "~1.6.3",
     "joi": "^17.3.0",
     "mongoose": "^5.11.10",
+    "mongoose-sex-page": "^1.2.4",
     "morgan": "~1.9.1"
   }
 }
