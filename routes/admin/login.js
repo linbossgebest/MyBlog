@@ -25,7 +25,6 @@ module.exports = async (req, res) => {
         req.app.locals.userInfo = user
         //添加session
         req.session.user = user.username
-        //console.log(req.session)
         //管理员用户 进入管理后台
         if (user.role === 'admin') {
             res.redirect('/admin/user')

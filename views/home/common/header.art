@@ -3,12 +3,10 @@
         <h1 class="logo fl">
             <span>Blog</span>
         </h1>
-        <!-- <h1 class="logo">
-            <span>Blog</span>
-        </h1> -->
         <ul class="navigation fr">
+            {{if userInfo}}
             <li>
-                <span> 欢迎：{{session.user}}</span>
+                <span> 欢迎：{{userInfo.username}}</span>
             </li>
             <li>
                 <a class="active" href="/home">首页</a>
@@ -16,6 +14,15 @@
             <li>
                 <a href="/admin/logout">退出</a>
             </li>
+            {{else}}
+            <li>
+                <a class="active" href="/home">首页</a>
+            </li>
+            <li>
+                <a href="/admin/login">登录</a>
+            </li>
+            {{/if}}
+
         </ul>
     </div>
 </div>

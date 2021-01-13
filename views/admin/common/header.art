@@ -1,0 +1,23 @@
+<div class="header">
+    <!-- 网站标志 -->
+    <div class="logo fl">
+        <div class="logo fl">
+          Blog后端管理 <i>version:1.0</i>
+        </div>
+    </div>
+    <!-- /网站标志 -->
+    <!-- 用户信息 -->
+    <div class="info">
+        <div class="profile dropdown fr btn-group">
+            <span class="btn dropdown-toggle" data-toggle="dropdown">
+                {{ userInfo ? userInfo.username:' 用户不存在' }}
+                <span class="caret"></span>
+            </span>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="user-edit?id={{@userInfo._id}}">个人资料</a></li>
+                <li><a href="/admin/logout">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /用户信息 -->
+</div>

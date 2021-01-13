@@ -5,6 +5,6 @@ module.exports=(req,res)=>{
         req.app.locals.userInfo=null
         //清除cookie
         res.clearCookie('connect.sid')
-        res.redirect('/admin/login')
+        res.redirect('/')
     })
 }
