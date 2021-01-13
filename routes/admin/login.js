@@ -6,7 +6,6 @@ module.exports = async (req, res) => {
 
     if (email.trim().length === 0 || password.trim().length === 0) {
         console.log('邮箱或者密码为空')
-        // console.log(req)
         req.flash('error','邮箱或者密码为空')
         return res.redirect('back')
     }
@@ -26,6 +25,7 @@ module.exports = async (req, res) => {
         req.app.locals.userInfo = user
         //添加session
         req.session.user = user.username
+        //console.log(req.session)
         //管理员用户 进入管理后台
         if (user.role === 'admin') {
             res.redirect('/admin/user')

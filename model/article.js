@@ -11,7 +11,7 @@ const articleSchema=new mongoose.Schema({
         ref:'User',
         required:[true,'请输入文章作者']
     },
-    publishData:{
+    publishDate:{
         type:Date,
         default:Date.now
     },

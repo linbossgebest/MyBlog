@@ -6,6 +6,8 @@ const logger = require('morgan');
 const bodyParser = require('body-parser')
 const flash = require('connect-flash')
 const session = require('express-session')
+const template = require('art-template');
+const dateformat = require('dateformat');
 
 //创建web服务器
 let app = express();
@@ -58,8 +60,14 @@ app.use(function (req, res, next) {
 //配置路由信息
 const home = require('./routes/home')
 const admin = require('./routes/admin')
-app.use(home)
-app.use(admin)
+app.use(home);
+app.use(admin);
+
+//配置template
+template.defaults.imports.dateformat = dateformat;
+
+//匹配根目录下的网站
+// app.get('/home', require('./routes/home/home'));
 
 //登录拦截
 
@@ -67,9 +75,6 @@ app.use(admin)
 app.use(function (req, res, next) {
   next(createError(404));
 });
-
-//匹配根目录下的网站
-app.get('/', require('./routes/home'));
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -79,7 +84,9 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('common/error');
+  res.render('common/error', {
+    err: err.message
+  });
 });
 
 

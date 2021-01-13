@@ -92,6 +92,14 @@ textarea {
 .logo img {
 	display: block;
 }
+.logo span{
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 26px;
+	color: #FFF;
+}
+
 /* 网站logo结束 */
 
 /* 网站导航开始 */
@@ -117,6 +125,16 @@ textarea {
 .navigation li a:hover,
 .navigation li .active {
 	background: #ff7300;
+}
+
+.navigation li span {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 26px;
+	color: #FFF;
+	font-size: 14px;
+	transition: all 0.4s;
 }
 /* 网站导航结束 */
 

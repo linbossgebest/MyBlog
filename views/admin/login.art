@@ -19,7 +19,7 @@
 <body>
     <div class="container-fluid">
         <div class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 main">
-            <form action="/login" method="POST">
+            <form action="/admin/login" method="POST">
                 <div class="form-group">
                     <label>用户名(邮箱)</label>
                     <input name="email" type="email" class="form-control" placeholder="请输入邮件地址">
