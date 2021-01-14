@@ -7,10 +7,11 @@
             </a>
         </li>
         <li>
-            <a class="item {{ currentLink == 'article' ? 'active' : ''}}" href="/admin/article" data-id="{{currentLink}}">
-                  <span class="glyphicon glyphicon-th-list"></span>
-                  文章管理
-              </a>
+            <a class="item {{ currentLink == 'article' ? 'active' : ''}}" href="/admin/article"
+                data-id="{{currentLink}}">
+                <span class="glyphicon glyphicon-th-list"></span>
+                文章管理
+            </a>
         </li>
     </ul>
     <div class="cprt">
